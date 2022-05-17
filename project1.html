@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Time and Date</title>
+    <script>
+        let a, time, date;
+        const options = {weekday: 'long' , year: 'numeric', month: 'long' , day: 'numeric'};
+        setInterval(() => {
+            a = new Date();
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            date = a.toLocaleDateString(undefined, options);
+            document.getElementById('time').innerHTML = time;
+            document.getElementById('date').innerHTML = date;
+        }, 1000);
+    </script>
+    <style>
+        .int{
+            border-radius: 20px;
+        background-image: url("https://source.unsplash.com/1140x361.59/?dark,dark");
+        }
+        body{
+            background: hsl(0, 0%, 0%);
+        }
+        .navbar-brand{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Time Will Heal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container my-4 int  int p-5">
+        <!-- <div class=" mb-4 bg-dark  int p-5"> -->
+            <!-- <div class=" p-5 bg-dark int"> -->
+              <h1 class="display-5 fw-bold text-light">Time And Date</h1>
+              <p class="col-md-8 fs-4 text-light">Time : <span id="time" class="text-light"></span></p>
+              <p class="col-md-8 fs-4 text-light">Date : <span id="date" class="text-light"></span></p>
+              <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
+            <!-- </div> -->
+          <!-- </div>s -->
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
